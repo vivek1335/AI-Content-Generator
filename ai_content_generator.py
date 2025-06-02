@@ -59,28 +59,28 @@ def readability_score(text):
 # --- Main Program ---
 
 def main():
-    print("🧠 AI SEO Blog Generator")
+    print(" AI SEO Blog Generator")
     topic = input("Enter the blog topic: ").strip()
     keyword_input = input("Enter keywords (comma-separated): ").strip()
     keywords = [k.strip() for k in keyword_input.split(",")]
 
-    print("\n📝 Generating blog content...\n")
+    print("\n Generating blog content...\n")
     blog = generate_blog_post(topic, keywords)
     meta = generate_meta_description(topic, keywords)
     density = keyword_density(blog, keywords)
     score = readability_score(blog)
 
-    print("🔹 Meta Description:")
+    print(" Meta Description:")
     print(meta)
 
-    print("\n🔹 Full Blog Content:\n")
+    print("\n Full Blog Content:\n")
     print(blog)
 
-    print("\n📊 Keyword Density:")
+    print("\n Keyword Density:")
     for k, v in density.items():
         print(f"{k}: {v}%")
 
-    print(f"\n📚 Readability Score: Flesch Reading Ease = {score}")
+    print(f"\n Readability Score: Flesch Reading Ease = {score}")
 
 if __name__ == "__main__":
     main()
